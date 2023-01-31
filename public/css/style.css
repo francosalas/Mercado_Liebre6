@@ -1,0 +1,301 @@
+@import url('formularios.css');
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+/* Variables */
+:root {
+  /* variables de colores */
+  --amarrillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+
+  /* fuentes */
+  --fuente: "roboto", sans-serif;
+
+  /* tamaños tipograficos */
+  --parrafos: 12px;
+  --titulos: 24px;
+  --precios: 18px;
+  --descuentos: 16px;
+  --descripciones: 16px;
+}
+
+/* Estilos generales */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gris-claro);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  font-size: var(--parrafos);
+}
+
+html {
+  font-family: var(--fuente);
+}
+
+li {
+  list-style: none;
+}
+
+
+/* Estilos de header */
+
+header {
+  background-color: var(--amarrillo);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+header div.logo-buscador {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+header div.logo-buscador div.logo img {
+  height: 100%;
+  max-height: 80px;
+  width: 100%;
+}
+
+header div.logo-buscador div.logo {
+  width: 45%;
+  max-width: 420px;
+  height: 100%;
+  max-height: 40px;
+}
+
+header div.logo-buscador div.busqueda {
+  width: 45%;
+  max-width: 420px;
+  position: relative;
+  margin-left: 15px;
+}
+
+header div.logo-buscador div.busqueda input{
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 7px;
+  text-align: center;
+}
+
+header div.logo-buscador div.busqueda button{
+  position: absolute;
+  right: 0;
+  height: 35px;
+  width: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 7px;
+}
+
+
+header div.logo-buscador p.cuotasYtarjeta {
+  text-align: center;
+  margin: 45px auto 0;
+}
+
+header nav {
+  display: none;
+}
+
+div.burger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--celeste);
+  padding: 7px;
+  border-radius: 5px;
+  color: white;
+  width: 40px;
+  height: 40px;
+  margin: 25px auto 0;
+}
+
+/* Estilos de main */
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+.deslizador {
+  margin-bottom: 20px;
+}
+
+main section {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+main section h4 {
+  width: 100%;
+  font-size: var(--titulos);
+  color: var(--gris-oscuro);
+  margin-bottom: 20px;
+}
+
+main section article {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  background-color: white;
+  margin-bottom: 15px;
+}
+
+main section article div.descripcion h5{
+  display: none;
+}
+
+main section article:hover{
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+main section article i:hover{
+  transform: rotate(-90deg);
+}
+
+
+
+main section article:hover div.descripcion h5 {
+  display: block;
+}
+
+
+main section article div.precio-oferta{
+  position: relative;
+  padding: 15px;
+  border-top: 1px solid var(--gris-claro);
+}
+
+main section article div.precio-oferta div.envio i{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 18px;
+  height: 18px;
+  color: var(--verde);
+  border: 1px solid var(--verde);
+  border-radius: 50%;
+  padding: 15px;
+  position: absolute;
+  top: -30%;
+  left: 80%;
+  transition: all 1s;
+}
+
+main section article div.precio-oferta span.precio {
+  font-size: var(--precios);
+}
+
+main section article div.precio-oferta span.oferta {
+  font-size: var(--descuentos);
+  color: var(--verde);
+  margin-left: 7%;
+}
+
+main section article h5 {
+  color: var(--gris-oscuro);
+  padding: 15px;
+  font-size: var(--descripciones);
+}
+
+/* Estilos de footer */
+footer{
+    background-color: white;
+}
+
+
+footer article{
+  text-align: center;
+  padding: 15px 50;
+}
+
+footer article p {
+    margin-bottom: 30px;
+}
+
+footer div.iconos {
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: var(--celeste);
+    font-size: 30px;
+}
+
+footer div.iconos:hover {
+  color: var(--verde);
+  transform: scale(1.4);
+}
+
+span {
+  text-align: center;
+}
+
+@media (min-width:768px ) {
+  
+
+  header div.logo-buscador div.logo {
+    width: 30%;
+  }
+  
+  header div.logo-buscador div.busqueda {
+    width: 30%;
+  }
+  
+  header div.logo-buscador p.cuotasYtarjeta {
+    width: 30%;
+    margin: 0;
+  }
+  
+  div.burger-menu {
+    display: none;
+  }
+
+  header nav{
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+
+  header nav ul li {
+    margin: 5px;
+  }
+
+
+  footer div.seccionesFooter{
+    display: flex;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
